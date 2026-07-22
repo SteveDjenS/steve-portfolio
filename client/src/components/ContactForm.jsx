@@ -2,6 +2,10 @@ import { useState } from "react";
 
 const initialForm = { name: "", email: "", message: "" };
 
+const API_URL = import.meta.env.VITE_API_URL
+  ? `${import.meta.env.VITE_API_URL}/api/contact`
+  : "/api/contact";
+
 export default function ContactForm() {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState("idle"); // idle | sending | success | error
@@ -17,7 +21,7 @@ export default function ContactForm() {
     setErrorMsg("");
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

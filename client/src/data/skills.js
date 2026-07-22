@@ -9,11 +9,15 @@ export const skillGroups = [
   },
   {
     category: "Web",
-    items: ["HTML", "CSS"],
+    items: ["HTML", "CSS", "Bootstrap", "Tailwind CSS"],
+  },
+  {
+    category: "Frameworks & Librairies",
+    items: ["React", "Next.js", "Node.js", "Express"],
   },
   {
     category: "Bases de données",
-    items: ["MySQL"],
+    items: ["MySQL", "PostgreSQL", "MongoDB"],
   },
   {
     category: "Outils",

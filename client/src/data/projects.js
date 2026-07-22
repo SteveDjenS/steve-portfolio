@@ -12,7 +12,22 @@ export const projects = [
     title: "Projets académiques — Développement web & logiciel",
     description:
       "Réalisation de plusieurs projets dans le cadre de la Licence en Génie Logiciel (ISI/UCAD) : applications web, bases de données MySQL et exercices de programmation en Python, Java et PHP, couvrant la conception, le développement et les tests.",
-    stack: ["Python", "Java", "PHP", "MySQL"],
+    stack: [
+      "Python",
+      "Java",
+      "PHP",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Next.js",
+      "Node.js",
+      "Bootstrap",
+      "Tailwind CSS",
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+    ],
     link: "",
   },
 ];

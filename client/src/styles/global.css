@@ -166,6 +166,18 @@ a:hover {
   }
 }
 
+.cert-image-link {
+  overflow: hidden;
+}
+
+.cert-image-link:hover .cert-image {
+  transform: scale(1.06);
+}
+
+.cert-image-link:hover .cert-overlay {
+  opacity: 1;
+}
+
 .matrix-canvas {
   position: absolute;
   inset: 0;

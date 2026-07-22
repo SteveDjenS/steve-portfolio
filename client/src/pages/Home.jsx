@@ -32,6 +32,15 @@ export default function Home() {
           >
             Télécharger mon CV
           </a>
+          <a
+            href="https://www.linkedin.com/in/djenonkar-steve-le-helbo-22089a299/"
+            target="_blank"
+            rel="noreferrer"
+            className="btn"
+            style={{ borderColor: "var(--color-text-dim)", color: "var(--color-text)" }}
+          >
+            LinkedIn ↗
+          </a>
         </div>
       </div>
     </section>

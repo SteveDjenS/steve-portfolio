@@ -25,7 +25,7 @@ export default function Home() {
             Me contacter
           </Link>
           <a
-            href="/CV_Steve_Le_Helbo_Djenonkar.pdf"
+            href={`${import.meta.env.BASE_URL}CV_Steve_Le_Helbo_Djenonkar.pdf`}
             download
             className="btn"
             style={{ borderColor: "var(--color-text-dim)", color: "var(--color-text)" }}

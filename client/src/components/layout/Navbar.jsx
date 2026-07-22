@@ -35,7 +35,11 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <a href="/CV_Steve_Le_Helbo_Djenonkar.pdf" download style={styles.cvLink}>
+            <a
+              href={`${import.meta.env.BASE_URL}CV_Steve_Le_Helbo_Djenonkar.pdf`}
+              download
+              style={styles.cvLink}
+            >
               cv ↓
             </a>
           </li>

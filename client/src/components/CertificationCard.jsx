@@ -1,9 +1,10 @@
 export default function CertificationCard({ certification }) {
-  const { title, issuer, date, duration, image, pdf } = certification;
+  const { title, issuer, date, duration, image, link } = certification;
+  const linkLabel = link.endsWith(".pdf") ? "Voir le PDF ↗" : "Voir sur LinkedIn ↗";
 
   return (
     <article className="card" style={styles.card}>
-      <a href={pdf} target="_blank" rel="noreferrer" className="cert-image-link" style={styles.imageLink}>
+      <a href={link} target="_blank" rel="noreferrer" className="cert-image-link" style={styles.imageLink}>
         <img
           src={image}
           alt={`Certificat : ${title}`}
@@ -12,7 +13,7 @@ export default function CertificationCard({ certification }) {
           loading="lazy"
         />
         <span className="cert-overlay" style={styles.overlay}>
-          Voir le PDF ↗
+          {linkLabel}
         </span>
       </a>
       <div style={styles.body}>

@@ -7,7 +7,7 @@ export const certifications = [
     issuer: "Cisco Networking Academy",
     date: "20 juin 2025",
     image: asset("certifications/cert-cisco-python-essentials-2.png"),
-    pdf: asset("certifications/cert-cisco-python-essentials-2.pdf"),
+    link: asset("certifications/cert-cisco-python-essentials-2.pdf"),
   },
   {
     id: "cisco-python-essentials-1",
@@ -15,7 +15,7 @@ export const certifications = [
     issuer: "Cisco Networking Academy",
     date: "10 mai 2025",
     image: asset("certifications/cert-cisco-python-essentials-1.png"),
-    pdf: asset("certifications/cert-cisco-python-essentials-1.pdf"),
+    link: asset("certifications/cert-cisco-python-essentials-1.pdf"),
   },
   {
     id: "python-bootcamp",
@@ -24,7 +24,7 @@ export const certifications = [
     date: "15 mai 2025",
     duration: "11h",
     image: asset("certifications/cert-python-bootcamp.png"),
-    pdf: asset("certifications/cert-python-bootcamp.pdf"),
+    link: asset("certifications/cert-python-bootcamp.pdf"),
   },
   {
     id: "js-php",
@@ -33,7 +33,7 @@ export const certifications = [
     date: "20 juillet 2026",
     duration: "5h",
     image: asset("certifications/cert-js-php.png"),
-    pdf: asset("certifications/cert-js-php.pdf"),
+    link: asset("certifications/cert-js-php.pdf"),
   },
   {
     id: "node-rest-api",
@@ -42,6 +42,14 @@ export const certifications = [
     date: "20 juillet 2026",
     duration: "12.5h",
     image: asset("certifications/cert-node-rest-api.png"),
-    pdf: asset("certifications/cert-node-rest-api.pdf"),
+    link: asset("certifications/cert-node-rest-api.pdf"),
+  },
+  {
+    id: "cyberland-python-ppbe",
+    title: "Python Programming — Beginner to Expert (PPBE)",
+    issuer: "CyberLand Academy",
+    date: "11 mai 2025",
+    image: asset("certifications/cert-cyberland-python.png"),
+    link: "https://www.linkedin.com/posts/djenonkar-steve-le-helbo-22089a299_python-certification-cyberlandacademy-share-7327623651283931136-0G6S/",
   },
 ];

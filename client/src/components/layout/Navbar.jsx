@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const links = [
@@ -12,19 +13,34 @@ const links = [
 ];
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
+
   return (
     <header style={styles.header}>
       <nav style={styles.nav}>
-        <NavLink to="/" style={styles.logo}>
+        <NavLink to="/" style={styles.logo} onClick={close}>
           steve@portfolio<span style={{ color: "var(--color-text)" }}>:~$</span>
           <span style={styles.cursor}>_</span>
         </NavLink>
-        <ul style={styles.list}>
+
+        <button
+          type="button"
+          className="navbar-toggle"
+          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? "✕" : "☰"}
+        </button>
+
+        <ul className={`navbar-links${open ? " navbar-links-open" : ""}`} style={styles.list}>
           {links.map((link) => (
             <li key={link.to}>
               <NavLink
                 to={link.to}
                 end={link.to === "/"}
+                onClick={close}
                 style={({ isActive }) => ({
                   ...styles.link,
                   ...(isActive ? styles.linkActive : {}),
@@ -39,6 +55,7 @@ export default function Navbar() {
               href={`${import.meta.env.BASE_URL}CV_Steve_Le_Helbo_Djenonkar.pdf`}
               download
               style={styles.cvLink}
+              onClick={close}
             >
               cv ↓
             </a>
@@ -53,12 +70,13 @@ const styles = {
   header: {
     position: "sticky",
     top: 0,
-    zIndex: 10,
+    zIndex: 20,
     background: "rgba(5, 7, 10, 0.85)",
     backdropFilter: "blur(6px)",
     borderBottom: "1px solid var(--color-border)",
   },
   nav: {
+    position: "relative",
     maxWidth: "var(--max-width)",
     margin: "0 auto",
     height: "var(--nav-height)",
@@ -66,7 +84,6 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    flexWrap: "wrap",
     gap: 12,
   },
   logo: {
@@ -82,11 +99,9 @@ const styles = {
   },
   list: {
     listStyle: "none",
-    display: "flex",
     gap: 20,
     margin: 0,
     padding: 0,
-    flexWrap: "wrap",
   },
   link: {
     fontFamily: "var(--font-mono)",

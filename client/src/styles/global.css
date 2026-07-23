@@ -166,6 +166,56 @@ a:hover {
   }
 }
 
+.navbar-links {
+  display: flex;
+}
+
+.navbar-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-green);
+  border-radius: var(--radius);
+  width: 40px;
+  height: 36px;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .navbar-toggle {
+    display: inline-flex;
+  }
+
+  .navbar-links {
+    display: none;
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    background: rgba(5, 7, 10, 0.98);
+    border-bottom: 1px solid var(--color-border);
+    padding: 16px 24px 24px;
+    max-height: calc(100vh - var(--nav-height));
+    overflow-y: auto;
+  }
+
+  .navbar-links.navbar-links-open {
+    display: flex;
+  }
+
+  .navbar-links li {
+    width: 100%;
+    padding: 6px 0;
+  }
+}
+
 .cert-image-link {
   overflow: hidden;
 }

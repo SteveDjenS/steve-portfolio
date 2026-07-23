@@ -1,5 +1,6 @@
 import ContactForm from "../components/ContactForm";
 import TestimonialCard from "../components/TestimonialCard";
+import TestimonialForm from "../components/TestimonialForm";
 import { testimonials } from "../data/testimonials";
 
 export default function Contact() {
@@ -22,6 +23,14 @@ export default function Contact() {
           </div>
         </div>
       ) : null}
+
+      <div style={{ marginTop: 64 }}>
+        <h2 style={{ fontSize: "1.3rem", marginBottom: 8 }}>Laisser un avis</h2>
+        <p className="section-subtitle" style={{ marginBottom: 24 }}>
+          Client, collègue, recruteur — ton avis sera publié après vérification de ma part.
+        </p>
+        <TestimonialForm />
+      </div>
     </section>
   );
 }

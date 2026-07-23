@@ -5,6 +5,7 @@ export const projects = [
     description:
       "Conception et développement d'un site vitrine WordPress complet pour une entreprise panafricaine : structure des pages, personnalisation du thème, mise en forme du contenu et mise en ligne.",
     stack: ["WordPress", "PHP", "CSS"],
+    image: `${import.meta.env.BASE_URL}projects/build-africa-group.png`,
     link: "https://buildafricagroup.net",
   },
   {

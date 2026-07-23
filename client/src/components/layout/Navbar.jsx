@@ -5,6 +5,7 @@ const links = [
   { to: "/", label: "accueil" },
   { to: "/a-propos", label: "a-propos" },
   { to: "/competences", label: "competences" },
+  { to: "/services", label: "services" },
   { to: "/projets", label: "projets" },
   { to: "/parcours", label: "parcours" },
   { to: "/experiences", label: "experiences" },
@@ -99,7 +100,7 @@ const styles = {
   },
   list: {
     listStyle: "none",
-    gap: 20,
+    gap: 14,
     margin: 0,
     padding: 0,
   },
